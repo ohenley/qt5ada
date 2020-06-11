@@ -11,10 +11,8 @@ Custom packaging of qt5ada thick binding by [Leonid Dulman](https://r3fowwcolhrz
 4. [Dependencies](#Dependencies)
 5. [Building](#Building)
    1. [Windows](#Windows)
-   2. [Other OSes](#Other-OSes)
 6. [Limitations](#Limitations)
-7. [Usage](#Usage)
-8. [Acknowledgments](#Acknowledgments)
+7. [Acknowledgments](#Acknowledgments)
 
 </details>
 
@@ -29,8 +27,8 @@ Custom packaging of qt5ada thick binding by [Leonid Dulman](https://r3fowwcolhrz
 <!---![alt text](https://github.com/ohenley/readme-template/blob/master/thug_war.png)--->
 
 ## Status
-MS-Windows: Working (many warnings at compilation but works flawlessly)
-Linux support: WIP
+- MS-Windows: Working (many warnings at compilation but works flawlessly)
+- Linux support: WIP
 
 ## Prerequisites
 - MS-Windows platform
@@ -41,13 +39,11 @@ None.
 
 ## Building
 #### MS-Windows
+To be linked against.
 Reproduce gprbuild (.gpr) configuration as used for this [project](https://github.com/ohenley/covidsim)
 
 ## Limitations
-Heavy clone. (Binding is linked against whole QT, so whole binaries needed is over 400MB)
-
-## Usage
-To be linked against.
+Heavy clone. (Binding is linked against whole QT, so binaries needed/included are over 400MB)
 
 ## Acknowledgments
 Thanks to [Leonid Dulman](https://r3fowwcolhrzycn2yzlzzw-on.drv.tw/AdaStudio/qtada/qt5ada.html) for his amazing work.
