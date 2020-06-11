@@ -1,5 +1,5 @@
 # qt5ada
-Custom package of qt5ada thick binding by [Leonid Dulman](https://r3fowwcolhrzycn2yzlzzw-on.drv.tw/AdaStudio/qtada/qt5ada.html)
+Custom packaging of qt5ada thick binding by [Leonid Dulman](https://r3fowwcolhrzycn2yzlzzw-on.drv.tw/AdaStudio/qtada/qt5ada.html)
 
 ## Table of Contents
 <details>
@@ -23,7 +23,7 @@ Custom package of qt5ada thick binding by [Leonid Dulman](https://r3fowwcolhrzyc
 
 </div>
 
-> git packaged for your convenience! 
+> git packaged for your convenience!  
 > works out of the box, like on TV!
 
 <!---![alt text](https://github.com/ohenley/readme-template/blob/master/thug_war.png)--->
