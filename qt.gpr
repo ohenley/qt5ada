@@ -1,0 +1,38 @@
+--  GNAT Project file for QT bindings
+--  This file can be easily adapted to later versions of QT.
+
+project QT is
+
+   type T_OS is ("Windows", "Linux");
+   QT_OS : T_OS := external ("QT_OS", "Windows");
+
+   sources := ("src");
+
+   for Create_Missing_Dirs use "True";  --  Flips by default the "-p" switch
+
+   case QT_OS is
+      when "Windows" =>
+         for Object_Dir use "obj/windows";
+         for Exec_Dir use "qt5/5.15/bin";
+      when "Linux" =>
+         for Object_Dir use "obj/windows";
+         --  !! To be checked:
+         for Exec_Dir use "linux/qt-5.15x86-64/usr/local/Qt-5.15.0/lib";
+   end case;
+
+   for Source_Dirs use sources;
+
+   package Linker is
+      case QT_OS is
+         when "Windows" =>
+            for Default_Switches ("Ada") use ("-Lbinaries\windows", "-lqt5c");
+         when "Linux" =>
+            --  !! To be checked:
+            for Default_Switches ("Ada") use
+              ("-Llinux/qt-5.15x86-64/usr/local/Qt-5.15.0/lib",
+               "-Llinux/qt5adax86-64/qt5adax86-64/usr/local/lib", "-lqt5c",
+               "-Wl,--unresolved-symbols=ignore-in-shared-libs");
+      end case;
+   end Linker;
+
+end QT;
